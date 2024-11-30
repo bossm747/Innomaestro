@@ -59,4 +59,27 @@ document.addEventListener('DOMContentLoaded', function() {
             tooltipText.style.opacity = '0';
         });
     });
+
+    // Modal handling
+    const modal = document.getElementById('myModal');
+    const modalContent = document.querySelector('.modal-content');
+    const closeModal = document.querySelector('.close');
+
+    function openModal(content) {
+        modalContent.innerHTML = content;
+        modal.style.display = 'block';
+    }
+
+    closeModal.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+    // Example usage of openModal function
+    // openModal('<h2>Detailed Results</h2><p>Here are the detailed results...</p>');
 });
