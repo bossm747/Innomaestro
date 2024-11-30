@@ -215,3 +215,8 @@ form button:hover {
     text-decoration: none;
     cursor: pointer;
 }
+
+/* Smooth transitions for hover effects, button clicks, and form submissions */
+button, a, textarea {
+    transition: all 0.3s ease;
+}
