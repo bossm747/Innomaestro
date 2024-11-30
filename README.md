@@ -1,7 +1,6 @@
-# Maestro - A Framework for Claude Opus, GPT and local LLMs to Orchestrate Subagents
+# Innovate Hub AI Developer
 
-
-This Python script demonstrates an AI-assisted task breakdown and execution workflow using the Anthropic API. It utilizes two AI models, Opus and Haiku, to break down an objective into sub-tasks, execute each sub-task, and refine the results into a cohesive final output.
+This Python script demonstrates an AI-assisted task breakdown and execution workflow using various AI models and APIs. It utilizes multiple AI models to break down an objective into sub-tasks, execute each sub-task, and refine the results into a cohesive final output.
 
 ## New: 
 # Updated the original Maestro to support Claude 3.5 Sonnet
@@ -9,8 +8,7 @@ This Python script demonstrates an AI-assisted task breakdown and execution work
 python maestro.py
 ```
 
-
-# Use Maestro with any APIs, Anthropic, Gemini, OpenAI, Cohere, etc.
+# Use Innovate Hub AI Developer with any APIs, Anthropic, Gemini, OpenAI, Cohere, etc.
 Thanks to a rewrite of the codebase using LiteLLM, it's now much easier to select the model you want.
 
 Simply
@@ -35,18 +33,17 @@ First install litellm
 pip install litellm
 ```
 
-Afeter installing dependecies run
+After installing dependencies run
 
 ```bash
 python maestro-anyapi.py
 ```
 
-
 ## GPT-4o
 
 The GPT script has been updated from the ground up to support the code capabilities of GPT-4o
 
-Afeter installing dependecies run
+After installing dependencies run
 
 ```bash
 python maestro-gpt4o.py
@@ -66,9 +63,8 @@ Then
 python maestro-lmstudio.py
 ```
 
-
 ### Ollama
-Mestro now runs locally thanks to the Ollama platform. Experience the power of Llama 3 locally! 
+Innovate Hub AI Developer now runs locally thanks to the Ollama platform. Experience the power of Llama 3 locally! 
 
 Before running the script
 
@@ -99,7 +95,7 @@ python maestro-ollama.py
 
 ## Highly requested features
 - GROQ SUPPORT
-Experience the power of maestro thanks to Groq super fast api responses.
+Experience the power of Innovate Hub AI Developer thanks to Groq super fast api responses.
 ```bash
 pip install groq
 ```
@@ -109,10 +105,9 @@ Then
 python maestro-groq.py
 ```
 
-
 - SEARCH 🔍
 
-Now, when it's creating a task for its subagent, Claude Opus will perform a search and get the best answer to help the subagent solve that task even better.
+Now, when it's creating a task for its subagent, Innovate Hub AI Developer will perform a search and get the best answer to help the subagent solve that task even better.
 
 Make sure you replace your Tavil API for search to work
 
@@ -127,7 +122,6 @@ python maestro-gpt.py
 ```
 
 After you complete your installs.
-
 
 ## Features
 
