@@ -31,5 +31,16 @@ def results():
 def serve_js(filename):
     return app.send_static_file(f'js/{filename}')
 
+@app.route('/settings', methods=['GET', 'POST'])
+def settings():
+    if request.method == 'POST':
+        llm_model = request.form.get('llmModel')
+        api_key = request.form.get('apiKey')
+        # Save the selected model and API key to a configuration file or database
+        # For simplicity, we'll just print them here
+        print(f"Selected LLM Model: {llm_model}")
+        print(f"API Key: {api_key}")
+    return render_template('settings.html')
+
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Maestro Task Orchestrator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Settings</h1>
+        </header>
+        <main>
+            <form action="/settings" method="post" id="settingsForm">
+                <label for="llmModel">Select LLM Model:</label>
+                <select id="llmModel" name="llmModel" required>
+                    <option value="openai">OpenAI</option>
+                    <option value="anthropic">Anthropic</option>
+                    <option value="gemini">Gemini</option>
+                    <option value="groq">Groq</option>
+                    <option value="ollama">Ollama</option>
+                    <option value="lmstudio">LMStudio</option>
+                </select>
+                <div class="tooltip">
+                    <label for="apiKey">Enter API Key:</label>
+                    <input type="text" id="apiKey" name="apiKey" required>
+                    <span class="tooltiptext">Please enter the API key for the selected model.</span>
+                </div>
+                <div class="validation-message" id="apiKeyValidation"></div>
+                <button type="submit">Save Settings</button>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
