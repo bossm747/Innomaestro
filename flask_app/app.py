@@ -27,5 +27,9 @@ def results():
         return jsonify({'results': results})
     return jsonify({'error': 'No objective provided'}), 400
 
+@app.route('/static/js/<path:filename>')
+def serve_js(filename):
+    return app.send_static_file(f'js/{filename}')
+
 if __name__ == '__main__':
     app.run(debug=True)
