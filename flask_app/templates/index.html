@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maestro Task Orchestrator</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </head>
 <body>
     <div class="container">
@@ -12,9 +13,13 @@
             <h1>Maestro Task Orchestrator</h1>
         </header>
         <main>
-            <form action="/" method="post">
+            <form action="/" method="post" id="objectiveForm">
                 <label for="objective">Enter your objective:</label>
-                <textarea id="objective" name="objective" rows="4" required></textarea>
+                <div class="tooltip">
+                    <textarea id="objective" name="objective" rows="4" required></textarea>
+                    <span class="tooltiptext">Please provide a clear and concise objective.</span>
+                </div>
+                <div class="validation-message" id="objectiveValidation"></div>
                 <button type="submit">Submit</button>
             </form>
             {% if results %}
